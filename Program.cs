@@ -8,6 +8,15 @@ namespace Linq
     {
         static void Main(string[] args)
         {
+            Filtering();
+            Ordering();
+            Aggregate();
+            Partitioning();
+            CustomTypes();
+        }
+
+        static void Filtering()
+        {
             // 1. Restriction/Filtering Operations
             // Find the words in the collection that start with the letter 'L'
             List<string> fruits = new List<string>() { "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry" };
@@ -50,7 +59,10 @@ namespace Linq
             {
                 Console.WriteLine(num);
             }
+        }
 
+        static void Ordering()
+        {
             // Order these student names alphabetically, in descending order (Z to A)
             List<string> names = new List<string>()
             {
@@ -112,7 +124,10 @@ namespace Linq
             Console.WriteLine("--------------------------");
             ascend.ForEach(num => Console.Write($"{num} "));
             Console.WriteLine();
+        }
 
+        static void Aggregate()
+        {
             // Output how many numbers are in this list
             List<int> numbers3 = new List<int>()
             {
@@ -176,7 +191,10 @@ namespace Linq
             Console.WriteLine("\nMost Expensive Product");
             Console.WriteLine("----------------------");
             Console.WriteLine(highestPrice);
+        }
 
+        static void Partitioning()
+        {
             List<int> wheresSquaredo = new List<int>()
             {
                 66,
@@ -210,7 +228,11 @@ namespace Linq
             Console.WriteLine("\nNumbers in List Until a Perfect Square was Reached");
             Console.WriteLine("--------------------------------------------------");
             notYetSquare.ForEach(num => Console.Write($"{num} "));
+            Console.WriteLine();
+        }
 
+        static void CustomTypes()
+        {
             // Build a collection of customers who are millionaires
 
             List<Customer> customers = new List<Customer>()
