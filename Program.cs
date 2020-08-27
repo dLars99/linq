@@ -150,6 +150,12 @@ namespace Linq
                 2454.63,
                 45.65
             };
+
+            double purchaseTotal = purchases.Sum(price => price);
+
+            Console.WriteLine("\nHow Much Money Have We Made?");
+            Console.WriteLine("----------------------------");
+            Console.WriteLine(purchaseTotal.ToString("#.00"));
         }
     }
 }
