@@ -151,11 +151,31 @@ namespace Linq
                 45.65
             };
 
-            double purchaseTotal = purchases.Sum(price => price);
+            double purchaseTotal = purchases.Sum();
 
             Console.WriteLine("\nHow Much Money Have We Made?");
             Console.WriteLine("----------------------------");
             Console.WriteLine(purchaseTotal.ToString("#.00"));
+
+            // What is our most expensive product?
+            List<double> prices = new List<double>()
+            {
+                879.45,
+                9442.85,
+                2454.63,
+                45.65,
+                2340.29,
+                34.03,
+                4786.45,
+                745.31,
+                21.76
+            };
+
+            double highestPrice = prices.Max();
+
+            Console.WriteLine("\nMost Expensive Product");
+            Console.WriteLine("----------------------");
+            Console.WriteLine(highestPrice);
         }
     }
 }
