@@ -112,6 +112,44 @@ namespace Linq
             Console.WriteLine("--------------------------");
             ascend.ForEach(num => Console.Write($"{num} "));
             Console.WriteLine();
+
+            // Output how many numbers are in this list
+            List<int> numbers3 = new List<int>()
+            {
+                15,
+                8,
+                21,
+                24,
+                32,
+                13,
+                30,
+                12,
+                7,
+                54,
+                48,
+                4,
+                49,
+                96
+            };
+
+            int totalNums = numbers3.Count;
+            Console.WriteLine("\nTotal Number of Numbers");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine(totalNums);
+
+            // How much money have we made?
+            List<double> purchases = new List<double>()
+            {
+                2340.29,
+                745.31,
+                21.76,
+                34.03,
+                4786.45,
+                879.45,
+                9442.85,
+                2454.63,
+                45.65
+            };
         }
     }
 }
