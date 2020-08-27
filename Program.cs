@@ -85,6 +85,33 @@ namespace Linq
             Console.WriteLine("\nStudent Names in Descending Order");
             Console.WriteLine("---------------------------------");
             descend.ForEach(name => Console.Write($"{name} "));
+            Console.WriteLine();
+
+            // Build a collection of these numbers sorted in ascending order
+            List<int> numbers2 = new List<int>()
+            {
+                15,
+                8,
+                21,
+                24,
+                32,
+                13,
+                30,
+                12,
+                7,
+                54,
+                48,
+                4,
+                49,
+                96
+            };
+
+            List<int> ascend = numbers2.OrderBy(num => num).ToList();
+
+            Console.WriteLine("\nNumbers in Ascending Order");
+            Console.WriteLine("--------------------------");
+            ascend.ForEach(num => Console.Write($"{num} "));
+            Console.WriteLine();
         }
     }
 }
